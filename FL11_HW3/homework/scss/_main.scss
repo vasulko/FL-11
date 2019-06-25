@@ -1,0 +1,257 @@
+$secondFont: 'Source Sans Pro', sans-serif;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin wrap {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+$status-bold: (
+    middle: 600,
+    bold: bold
+);
+
+body {
+    font-family: $mainFont;
+    background-color: $bgColor;
+}
+
+.header {
+    background: url($bgImg) no-repeat center;
+    background-size: cover;
+    border-bottom-right-radius: 290px;
+    
+    &-wrap {
+        @include wrap;
+        padding-bottom: 170px;
+        padding-top: 25px;
+    }
+
+    &_heading {
+        font-family: $secondFont;
+        font-size: 80px;
+        line-height: 1;
+        color: $mainColor;
+        font-weight: map-get($status-bold, bold);
+        width: 550px;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 40px;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            height: 20px;
+            width: 335px;
+            background-color: $underlineColor;
+            bottom: 5px;
+            left: 0;
+            z-index: -1;
+        }
+    }
+
+    &_text {
+        color: $mainColor;
+        font-size: 18px;
+        white-space: pre-line;
+        margin-bottom: 50px;
+    }
+
+    &_button{
+        border: none;
+        padding: 15px 42px;
+        color: white;
+        font-weight: map-get($status-bold, bold);
+        background-color: $btnColor;
+        border-radius: 5px;
+    }
+
+
+}
+
+.landing-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+
+    img {
+        margin-right: 20px;
+    }
+
+    p {
+        line-height: 1;
+        font-weight: map-get($status-bold, bold);
+        font-size: 22px;
+        color: $mainColor;
+    }
+
+    span {
+        display: block;
+        font-size: 12px;
+        font-weight: normal;
+        text-align: center;
+    }
+
+}
+
+.section{
+    padding-top: 20px;
+    padding-bottom: 170px;
+    position: relative;
+
+    &_text {
+        position: relative;
+        font-family: $secondFont;
+        color: $mainColor;
+        font-size: 42px;
+        font-weight: map-get($status-bold, middle);
+        text-align: center;
+        margin-bottom: 20px;
+        z-index: 1;
+        
+        &::before{
+            content: "";
+            position: absolute;
+            height: 15px;
+            width: 186px;
+            background-color: $underlineColor;
+            bottom: 5px;
+            left: 642px;
+            z-index: -1;
+        }
+    }
+
+    &_card_wrap{
+        @include wrap;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_card{
+        width: 30%;
+        padding: 15px;
+        background-color: $secondColor;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &_card_img {
+        width: 310px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    &_card_heading {
+        font-family: $secondFont;
+        font-weight: map-get($status-bold, middle);
+        font-size: 20px;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 10px;
+    }
+
+    &_card_underline {
+        position: absolute;
+        display: block;
+        height: 10px;
+        width: 100%;
+        background-color: $underlineColor;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    &_card_text {
+        color: $textColor;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    &_banner{
+        width: 700px;
+        background: $gradient;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 5px;
+        padding: 15px 0px 20px;
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        margin-right: -50%;
+        transform: translateX(-50%);
+    }
+
+    &_banner_heading{
+        font-family: $secondFont;
+        font-weight: map-get($status-bold, middle);
+        font-size: 24px;
+        color: $secondColor;
+        font-weight: map-get($status-bold, bold);
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 1;
+
+        &::before{
+            content: "";
+            position: absolute;
+            height: 10px;
+            width: 52px;
+            background-color: $underlineColor;
+            left: 96px;
+            bottom: 3px;
+            z-index: -1;
+        }
+    }
+
+    &_banner_text {
+        color: $textColor;
+        font-size: 14px;
+    }
+
+    &_banner_button{
+        @extend .header_button;
+    }
+}
+
+.footer{
+    background-color: $secondColor;
+    padding-top: 100px;
+    padding-bottom: 30px;
+
+    &-wrap{
+        @include wrap;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .landing-logo{
+        @extend .landing-logo;
+        
+        p {
+            color: $textColor;
+        }
+    }
+
+    .footer_text {
+        width: 300px;
+        color: $textColor;
+        font-size: 14px;
+    }
+
+    &-cr{
+        color: #c0c3ce;
+        font-size: 14px;
+    }
+}
