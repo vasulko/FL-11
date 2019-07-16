@@ -33,7 +33,6 @@ const data = [
     }
   ]
   
-
 function getNumbers(string){
     let arrNumber = [];
     let arrString = string.split('');
@@ -47,7 +46,6 @@ function getNumbers(string){
 
     return arrNumber;
 }
-
 
 function findTypes(...args){
     let dataTypes = {};
@@ -113,9 +111,6 @@ function daysBetween(date1, date2){
     return Math.round(differentTime/(micSeconds*seconds*minutes*hours));
 }
 
-
-
-
 function getAmountOfAdultPeople(data){
     const daysForAdult = 6570;
     const todayDate = new Date();
@@ -125,7 +120,6 @@ function getAmountOfAdultPeople(data){
 
     return result.length;
 }
-
 
 function keys(object){
     let result = [];
@@ -149,10 +143,3 @@ function values(object){
 
     return result;
 }
-
-
-
-
-
-
-
