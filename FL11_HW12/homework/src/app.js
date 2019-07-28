@@ -101,8 +101,6 @@ function mainPage(){
          }
          wrapMain.appendChild(ul);
         emptyListText.style.display = 'none';
-    } else {
-        emptyListText.style.display = '';
     }
 
     function itemDone(){
@@ -142,6 +140,10 @@ function mainPage(){
             if(todoItems[i].description === text){
                 todoItems.splice(i,1);
             }
+        }
+
+        if(todoItems.length === 0){
+            emptyListText.style.display = '';
         }
 
         saveItems();
