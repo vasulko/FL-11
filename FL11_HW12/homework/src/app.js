@@ -333,11 +333,9 @@ function showAlertError(msg){
 
     rootNode.appendChild(errorDiv);
 
-    setTimeout(function(){
-        errorDiv.style.display = 'none';
-    },time);
+    setTimeout(closeError,time);
 
     function closeError(){
-        this.parentElement.remove();
+        errorDiv.remove();
     }
 }
