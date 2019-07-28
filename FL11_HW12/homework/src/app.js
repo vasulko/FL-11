@@ -1,4 +1,3 @@
-
 const time = 2000;
 const idCut = 17;
 const rootNode = document.getElementById('root');
@@ -6,7 +5,6 @@ const rootNode = document.getElementById('root');
 let todoItems = JSON.parse(localStorage.getItem('items')) || [];
 
 let suffix = localStorage.getItem('suffix') || 1;
-
 
 function goToAddPage(){
     suffix++;
@@ -125,7 +123,6 @@ function mainPage(){
         if(parent.classList.contains('done')){
             parent.classList.toggle('done');
             child.src = '/assets/img/todo-s.png';
-            // parent.style.backgroundColor = '';
             item.isDone = false;
         } else {
             parent.classList.toggle('done');
