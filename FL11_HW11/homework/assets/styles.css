@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 1140px;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+
+.wrap h1,
+.wrap h3 {
+    text-align: center;
+    color: #3ab2fe;
+    margin-bottom: 10px;
+}
+
+.wrap #error-msg {
+    display: none;
+}
+
+.input-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-block input[type="text"]{
+    width: 95%;
+    padding: 10px;
+    outline: none;
+}
+
+button {
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+}
+
+#add-btn i{
+    font-size: 40px;
+}
+
+.save-btn i{
+    font-size: 35px;
+}
+
+.checkbox-btn i {
+    font-size: 35px;
+    font-weight: normal;
+    color: grey;
+}
+
+.edit-btn i,
+.delete-btn i
+{
+    font-size: 35px;
+    color: #89c4f4;
+}
+
+.newName {
+    padding: 10px;
+    outline: none;
+    margin-right: 5px;
+}
+
+.wrap-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description-action {
+    display: flex;
+    align-items: center;
+}
+
+.description-action .text-action {
+    color: #3ab2fe;
+    font-size: 22px;
+}
+
+ul{
+    list-style: none;
+}
+
+.edit-wrap {
+    display: none;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkbox-btn i i {
+    display: none;
+}
+
+.checkbox-btn.checked i{
+    position: relative;
+}
+
+.checkbox-btn.checked i i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 35px;
+}
+
+[draggable]{
+    user-select: none;
+}
+
+.list-item,
+.text-action {
+    cursor: move;
+}
+
+.list-item.over {
+    border: 2px dashed #000;
+  }

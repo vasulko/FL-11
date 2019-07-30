@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 11 - TODO Cat List</title>
+  <link rel="stylesheet" href="./assets/material-icons/material-icons.css">
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <div id="root">
+    <div class="wrap">
+      <h1>TODO Cat List</h1>
+      <h3 id="error-msg">Maximum item per list are created</h3>
+      <div class="input-block">
+        <input type="text" name="action" placeholder="Add new action" id="action">
+        <button id="add-btn">
+          <i class="material-icons">add_box</i>
+        </button>
+      </div>
+        <div class="wrap-list">
+            <ul id="action-list">
+              <li class="list-item" draggable="true">
+                <div class="wrap-item">
+                    <div class="description-action">
+                        <button class='checkbox-btn'>
+                            <i class="material-icons">check_box_outline_blank
+                              <i class="material-icons">
+                                done
+                                </i>
+                            </i>
+                        </button>
+                        <label class="text-action">
+                          Find the cat
+                        </label>
+                        <button class="edit-btn">
+                          <i class="material-icons">edit</i>
+                        </button>
+                    </div>
+                    <button class="delete-btn">
+                      <i class="material-icons">delete</i>
+                    </button>
+                </div>
+                <div class="edit-wrap">
+                  <input type="text" name="new-name" placeholder="Write new name action" class="newName">
+                  <button class="save-btn"><i class="material-icons">save</i></button>
+                </div>
+              </li>
+            </ul>
+        </div>
+    </div>
+  </div>
+  <script src="./src/app.js"></script>
+</body>
+</html>
